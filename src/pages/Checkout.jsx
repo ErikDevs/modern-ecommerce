@@ -45,7 +45,7 @@ const Checkout = () => {
             <h2 className='subtotal'>Total: ${getCartTotal().toFixed(2)}</h2>
             <Link to="payment" className='payment-link'><h3 className='payment'>Continue to checkout</h3></Link>
             <button className='clear-btn' onClick={() => {clearCart()}}>Remove All</button>
-        </div>) : (<div className='empty-cart'><h2>Your cart is currently empty</h2></div>)}
+        </div>) : (<div className='empty-cart'><h2>Your cart is currently empty</h2><span className='continue-shopping'><Link className='shopping-link' to="/"><p>Continue Shoping</p></Link></span></div>)}
       
    </div>
         

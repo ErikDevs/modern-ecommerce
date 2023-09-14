@@ -1,8 +1,10 @@
+import { Alert } from '@mui/material';
 import { createContext, useState, useEffect } from 'react'
 
 export const CartContext = createContext()
 
 export const CartProvider = ({children}) => {
+
   const [cartItems, setCartItems] = useState(localStorage.getItem('cartItems') ? JSON.parse(localStorage.getItem('cartItems')) : [])
   const addToCart = (item) => {
     const isItemInCart = cartItems.find((cartItem) => cartItem.id === item.id); // check if the item is already in the cart
@@ -16,8 +18,11 @@ export const CartProvider = ({children}) => {
         )
     );
     } else {
-    setCartItems([...cartItems, { ...item, quantity: 1 }]); // if the item is not in the cart, add the item to the cart
+    setCartItems([...cartItems, { ...item, quantity: 1 }]);
+    
+     // if the item is not in the cart, add the item to the cart
     }
+    
   };
 
   const removeFromCart = (item) => {

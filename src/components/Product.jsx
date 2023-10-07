@@ -9,6 +9,7 @@ import { products } from './products'
 
 
 const Product = () => {
+  
   const { cartItems, addToCart } = useContext(CartContext)
   return (
     <div className='product'>
@@ -19,7 +20,6 @@ const Product = () => {
                 </div>
                     <div className='product-text'>
                     <h4>{product.title}</h4>
-                    <p>{product.description.slice(0, 100)}...</p>
                     <h3>${product.price}</h3>
                     <div className='rating'>
                     {Array(product.rating).fill().map((_) => 
@@ -31,7 +31,7 @@ const Product = () => {
                       
                       addToCart(product)
                     
-                    }} className='cart-btn'>Add to cart</button>
+                    }} className='cart-btn'>ADD TO CART</button>
                     </div>
                 
               </div>

@@ -11,7 +11,7 @@ const Checkout = () => {
   return (
     <div className='cart'>
      <div className="cart-title">
-           <h2>Cart</h2>
+           <h2>Cart Products</h2>
         </div>
         <div className='cart-header'>
            <h2>Product</h2>

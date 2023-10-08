@@ -789,7 +789,6 @@ i {
     .banner-info {
      width: 40%;
      margin: 0 0.8rem 0 2rem;
-     z-index: 200;
     }
     .banner-info h3 {
         width: 20.5rem;
@@ -864,7 +863,7 @@ i {
     right: 0;
     bottom: 0;
     z-index: 2;
-    background-color: var(--dark-color); 
+    background-color: rgba(0,0,0,0.5); 
     cursor: pointer;
     }
 
@@ -1015,6 +1014,7 @@ i {
     .banner-info h2 {
         font-size: 2rem;
         margin: 0 0 0.2rem 0;
+        
     }
     .banner-info h1 {
         font-size: 3rem;

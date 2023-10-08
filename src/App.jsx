@@ -7,6 +7,7 @@ import Checkout from './pages/Checkout'
 import Category from './pages/Category'
 import Logout from './pages/Logout'
 import Footer from './components/Footer';
+import BottomFooter from './components/bottom-footer';
 
 
 
@@ -23,6 +24,7 @@ function App() {
             <Route path='/logout' element={<Logout />} />
         </Routes>
         <Footer />
+        <BottomFooter />
         </div>
     
     </BrowserRouter>

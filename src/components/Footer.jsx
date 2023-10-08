@@ -3,8 +3,10 @@ import '../App.css'
 import { Link } from 'react-router-dom';
 
 
+
 const Footer = () => {
   return (
+  
     <div className='footer'>
       <div className='footer-top'>
       <Link to="/">
@@ -77,12 +79,12 @@ const Footer = () => {
                 <p>Senegal</p>
                 <p>Tunisia</p>
                 <p>Uganda</p>
-                <p>Zando</p>
                 </div>
                 </div>
              </div>
           </div>
     </div>
+    
   )
 }
 

@@ -23,7 +23,7 @@ const Product = () => {
                     <h3>${product.price}</h3>
                     <div className='rating'>
                     {Array(product.rating).fill().map((_) => 
-                    <p><img src="https://pixlok.com/wp-content/uploads/2021/07/Rating-SVG-Icon-s9fd.png" style={{width: "20px"}} alt="" /></p>)}
+                    <p><img src="https://pixlok.com/wp-content/uploads/2021/07/Rating-SVG-Icon-s9fd.png" style={{width: "1rem"}} alt="" /></p>)}
                     </div>
                     <button 
                     

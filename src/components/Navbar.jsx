@@ -22,10 +22,12 @@ const Navbar = () => {
   
   return (
     <>
-    <button className='toggle-menu' onClick={toggleMenu}>{menuOpen ? <CloseIcon /> : <MenuIcon />}</button>
+    <button className='toggle-menu' onClick={toggleMenu}>{menuOpen ? <CloseIcon className='menu-btn' /> : <MenuIcon className='menu-btn' />}</button>
     <i className="view-more" onClick={toggleMenu}>{menuOpen? <ExpandLessIcon className='icon' />  : <ExpandMoreOutlinedIcon className='icon'/>}</i>
             {menuOpen && (
+              <>
                 <div className='nav-bar'>
+                 
                 <div className='profile-items'>
                       <Link onClick={toggleMenu} className='profile__link after-effect' to="/login">
                       <PersonOutlineIcon className='icon' />
@@ -38,8 +40,10 @@ const Navbar = () => {
                       <LogoutIcon className='icon'/>
                       <p>Logout</p></Link>
                 </div>
-                      
+               
                </div>
+               <div className='overlay'></div>
+               </>
               )
             }
      </>

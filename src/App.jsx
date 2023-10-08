@@ -8,6 +8,7 @@ import Category from './pages/Category'
 import Logout from './pages/Logout'
 import Footer from './components/Footer';
 import BottomFooter from './components/bottom-footer';
+import UserAccount from './pages/account';
 
 
 
@@ -22,6 +23,7 @@ function App() {
             <Route path='/login' element={<Login />} />
             <Route path='/category' element={<Category />} />
             <Route path='/logout' element={<Logout />} />
+            <Route path='/account' element={<UserAccount />} />
         </Routes>
         <Footer />
         <BottomFooter />

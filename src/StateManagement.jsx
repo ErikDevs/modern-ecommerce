@@ -1,9 +1,31 @@
 import { Alert } from '@mui/material';
 import { createContext, useState, useEffect } from 'react'
+import { FacebookAuthProvider, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
+import {auth} from '../utils/firebase';
 
 export const CartContext = createContext();
 
 export const CartProvider = ({children}) => {
+
+  const googleProvider = new GoogleAuthProvider();
+
+  const googleLogin = async () => {
+    try {
+      const result = await signInWithPopup(auth, googleProvider)
+      console.log(result.user)
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
+  const facebookProvider = new FacebookAuthProvider();
+
+  const facebookLogin = async () => {
+    try{
+      const result = await signInWithPopup(auth, facebookProvider);
+      console.log(result)
+    } catch(e) {console.log(e)}
+  }
 
   const [cartItems, setCartItems] = useState(localStorage.getItem('cartItems') ? JSON.parse(localStorage.getItem('cartItems')) : [])
   const addToCart = (item) => {
@@ -58,6 +80,8 @@ export const CartProvider = ({children}) => {
 }, []);
 
 
+
+
   return (
     <CartContext.Provider
     value={{
@@ -66,6 +90,8 @@ export const CartProvider = ({children}) => {
       removeFromCart,
       clearCart,
       getCartTotal,
+      googleLogin,
+      facebookLogin
     }}
   >
     {children}

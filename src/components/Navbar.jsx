@@ -8,12 +8,14 @@ import CloseIcon from '@mui/icons-material/Close';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import ExpandMoreOutlinedIcon from '@mui/icons-material/ExpandMoreOutlined';
 import LogoutIcon from '@mui/icons-material/Logout';
+import {useAuthState} from 'react-firebase-hooks/auth';
+import {auth} from '../../utils/firebase'
 
 
 
 const Navbar = () => {
 
- 
+  const [user, loading ] = useAuthState(auth);
   const [menuOpen, setMenuOpen] = useState(false)
 
   const toggleMenu = () => {
@@ -29,16 +31,16 @@ const Navbar = () => {
                 <div className='nav-bar'>
                  
                 <div className='profile-items'>
-                      <Link onClick={toggleMenu} className='profile__link after-effect' to="/login">
+                      <Link onClick={toggleMenu} className='profile__link after-effect' to={user? "/account" : "/login"}>
                       <PersonOutlineIcon className='icon' />
-                      <p>My Account</p>
+                      <p>{user? <span>{user.displayName}</span> : <span>My Account</span> }</p>
                       </Link>
                       <Link onClick={toggleMenu} className='profile__link after-effect' to="/checkout">
                       <Inventory2OutlinedIcon className='icon' />
                       <p>Orders</p> </Link>
                       <Link onClick={toggleMenu} className='profile__link after-effect ' to="/">
                       <LogoutIcon className='icon'/>
-                      <p>Logout</p></Link>
+                      <p onClick={() => auth.signOut()}>Logout</p></Link>
                 </div>
                
                </div>

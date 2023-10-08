@@ -7,11 +7,6 @@
     --light: #fff;
 }
 
-.app {
-    max-width: 1440px;
-    margin: auto;
-    padding: 0;
-}
 
 /* Header styling starts here */
 
@@ -204,7 +199,7 @@ input::placeholder {
 
 .count {
     position: absolute;
-    bottom: 1.4rem;
+    bottom: 1rem;
     left: 1rem;
     background-color: var(--primary-color);
     border-radius: 50%;
@@ -240,8 +235,22 @@ input::placeholder {
     padding-left: 2rem;
     align-items: center;
     justify-content: space-between;
-    background-color: var(--primary-color);
+    background-color: var(--bg);
     overflow: hidden;
+}
+
+.texture-bg {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 40rem;
+    right: 2px;
+}
+
+.texture-bg img {
+    object-fit: cover;
+    width: 100%;
+    opacity: 0.06;
 }
 
 .banner-info {
@@ -255,31 +264,33 @@ input::placeholder {
 }
 
 .image-holder img {
-    width: 130%;
+    width: 100%;
     object-fit: cover;
+    z-index: 100;
+    margin-left: 1.2rem;
 }
 
 .banner-info h2 {
     font-family: "Georgia", serif;
     font-weight: 300;
     font-size: 3rem;
-    color: var(--light);
+    color: var(--primary-color);
 }
 
 .banner-info h1 {
     font-weight: bolder;
     font-size: 4rem;
-    color: var(--light);
+    color: var(--primary-color);
 }
 
 .banner-info h3 {
     font-weight: 600;
     font-family: 'Segoe UI', sans-serif;
-    color: var(--complementary-color);
+    color: var(--secondary-color);
     padding: 0.6rem 1.25rem;
     letter-spacing: 0.8rem;
     margin-top: 1.25rem;
-    border: 0.3rem solid var(--complementary-color);
+    border: 0.3rem solid var(--secondary-color);
     width: fit-content;
 }
 
@@ -296,14 +307,12 @@ input::placeholder {
 .banner-info button {
     background-color: var(--secondary-color);
     border: none;
-    border-radius: 5px;
-    padding: 20px 40px;
+    border-radius: 0.2rem;
+    padding: 1.2rem 2.2rem;
     color: var(--light);
-    font-family: "montserrat", sans-serif;
-    margin-top: 30px;
-    font-size: 0.6rem;
-    font-weight: 800;
-    letter-spacing: 2px;
+    margin-top: 1.8rem;
+    font-size: 1rem;
+    font-weight: 400;
     cursor: pointer;
 }
 
@@ -323,7 +332,6 @@ input::placeholder {
     width: 100%;
     margin-top: 10px;
     gap: 0.5rem;
-    background-color: var(--bg-color);
 }
 
 .product-info {
@@ -536,7 +544,6 @@ input::placeholder {
 
 .product-photo img {
     width: 20%;
-    margin-right: 0.8rem;
 }
 
 .product-photo p {
@@ -783,7 +790,7 @@ i {
        padding: 0;
        display: flex;
        width: 100%;
-       height: 58vh;
+       height: 32rem;
     }
     
     .banner-info {
@@ -799,14 +806,17 @@ i {
     .image-holder {
         width: 60%;
         display: flex;
+        height: 40rem;
         justify-content: center;
         align-items: center;
         z-index: 90;
     }
  
     .image-holder img {
-       object-fit: contain;
-       width: 220%;
+       object-fit: cover;
+       width: 200%;
+       height: 80%;
+       margin-left: 2rem;
     }
     .product {
        grid-template-columns: repeat(3, 1fr);
@@ -1014,16 +1024,21 @@ i {
     .banner-info h2 {
         font-size: 2rem;
         margin: 0 0 0.2rem 0;
+        color: var(--bg-color);
         
     }
     .banner-info h1 {
         font-size: 3rem;
+        color: var(--light);
     }
 
     .banner-info h3 {
         font-size: 0.8rem;
         margin: auto;
         padding: auto;
+        border: none;
+        color: var(--light);
+        outline: solid 0.2rem var(--light);
     }
 
     .banner-info p {

@@ -6,11 +6,14 @@ import { Link } from 'react-router-dom';
 import { useContext } from 'react';
 import { CartContext } from '../StateManagement';
 import Navbar from './Navbar';
-
+import {useAuthState} from 'react-firebase-hooks/auth';
+import {auth} from '../../utils/firebase'
 
 
 const Header = () => {
   const { cartItems } = useContext(CartContext)
+
+  const [user, loading ] = useAuthState(auth);
 
  return (
     <div className='header'>
@@ -25,7 +28,7 @@ const Header = () => {
          <div className='profile'>
                 <Link className="sub-profile"style={{textDecoration: "none", color: "#030303"}} to="/user-info">
                   <i className='user-icon'><AccountCircleOutlinedIcon className='icon user' /></i>
-                  <p>Hi, user</p></Link>
+                  <p>Hi, {user? <span>{user.displayName}</span> : <span>User</span>}  </p></Link>
                 <Navbar />
                 </div>
           </div>

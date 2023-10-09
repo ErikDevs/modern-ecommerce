@@ -16,7 +16,7 @@
     display: flex;
     align-items: center;
     box-shadow: 0  1px 30px -25px;
-    top: 10px;
+    top: 0;
     z-index: 100;
     position: sticky;
     justify-content: space-between;
@@ -235,21 +235,24 @@ input::placeholder {
     padding-left: 2rem;
     align-items: center;
     justify-content: space-between;
-    background-color: var(--bg);
+    background-color: var(--primary-color);
     overflow: hidden;
+    margin: 1rem 0;
 }
 
 .texture-bg {
     display: flex;
     position: absolute;
     width: 100%;
+    left: 14.5rem;
     height: 40rem;
-    right: 2px;
+    height: 42rem;
 }
 
 .texture-bg img {
     object-fit: cover;
-    width: 100%;
+    width: 1440px;
+    margin-top: 1rem;
     opacity: 0.06;
 }
 
@@ -267,35 +270,36 @@ input::placeholder {
     width: 100%;
     object-fit: cover;
     z-index: 100;
-    margin-left: 1.2rem;
+    margin-left: 1rem;
+    margin-top: 10rem;
 }
 
 .banner-info h2 {
     font-family: "Georgia", serif;
     font-weight: 300;
-    font-size: 3rem;
-    color: var(--primary-color);
+    font-size: 4rem;
+    color: var(--light);
 }
 
 .banner-info h1 {
     font-weight: bolder;
-    font-size: 4rem;
-    color: var(--primary-color);
+    font-size: 6rem;
+    color: var(--light);
 }
 
 .banner-info h3 {
     font-weight: 600;
     font-family: 'Segoe UI', sans-serif;
-    color: var(--secondary-color);
+    color: var(--light);
     padding: 0.6rem 1.25rem;
     letter-spacing: 0.8rem;
     margin-top: 1.25rem;
-    border: 0.3rem solid var(--secondary-color);
+    outline: 0.3rem solid var(--light);
     width: fit-content;
 }
 
 .banner-info p {
-    font-size: 0.8rem;
+    font-size: 1rem;
     font-family: "Raleway", sans-serif;
     color: var(--light);
     max-width: 40rem;
@@ -326,11 +330,15 @@ input::placeholder {
 /* Banner styling end */
 
 /* Products starts */
+.products {
+    background-color: var(--primary-color) ;
+    height: 100%;
+    padding: 1rem;
+}
 .product {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     width: 100%;
-    margin-top: 10px;
     gap: 0.5rem;
 }
 
@@ -843,6 +851,11 @@ i {
     .copy-right {
         padding: 1rem;
     }
+
+    .texture-bg {
+        display: none;
+    }
+
  
  }
 
@@ -1243,6 +1256,10 @@ i {
     }
 
     .store-items {
+        display: none;
+    }
+
+    .texture-bg {
         display: none;
     }
 

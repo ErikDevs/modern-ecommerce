@@ -12,7 +12,9 @@ const Product = () => {
   
   const { cartItems, addToCart } = useContext(CartContext)
   return (
-    <div className='product'>
+    <div className='products'>
+            
+            <div className='product'>
             {products.map((product) => (
               <div className='product-info'>
                 <div className='product-image'>
@@ -36,6 +38,7 @@ const Product = () => {
                 
               </div>
             ))}
+            </div>
         
     </div>
   )

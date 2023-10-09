@@ -1,6 +1,6 @@
 import React from 'react'
 import '../App.css'
-import image from '../assets/4530199.jpg'
+import image from '../assets/banner.png';
 import { Link } from '@mui/material'
 
 const Banner = () => {
@@ -18,9 +18,6 @@ const Banner = () => {
 
       <div className='image-holder'>
       <img src={image} alt='banner' /></div>
-      <div className='texture-bg'>
-        <img src="https://img.freepik.com/premium-photo/exotic-seamless-pattern-turquoise-symmetrical-kaleidoscope-background-summer-swimwear-exotic-seamless-design-textile-ready-pretty-print-swimwear-fabric-wallpaper-wrapping_174187-6164.jpg?w=996" alt="" />
-      </div>
     </div>
   )
 }

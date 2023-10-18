@@ -867,6 +867,7 @@ i {
         position: sticky;
         padding: 0 1.3rem;
         top: 0;
+        height: fit-content;
     }
     
     .menu {
@@ -973,13 +974,10 @@ i {
 
 .header__search {
     position: relative;
-    bottom: 1.2rem;
+    bottom: 0.5rem;
     
 }
-    
-    .profile-account {
-        position: relative;
-    }
+ 
 
     .profile-items {
         display: flex;
@@ -1001,14 +999,14 @@ i {
     .header__user-info {
         display: flex;
         position: absolute;
-        right: 1.8rem;
+        right: 4rem;
         top: 0;
     }
 
     .header__cart {
         position: absolute;
-        top: 0.5rem;
-        right: 4rem;
+        top: 0.6rem;
+        right: 5rem;
     }
 
     .cart-name {
@@ -1089,18 +1087,19 @@ i {
 
     .cart-product {
         display: flex;
-        padding: 0;
+        justify-content: center;
+        align-items: center;
+        padding: auto;
         flex-direction: column;
     }
 
     .product-photo {
-        width: 80%;
+        width: 50%;
         display: block;
-        align-items: center;
     }
 
     .product-photo img {
-        width: 50%;
+        width: 100%;
         margin: 0.2rem;
     }
     

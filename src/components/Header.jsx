@@ -26,11 +26,11 @@ const Header = () => {
       </div>
       <div className='header__user-info'>
          <div className='profile'>
-                <Link className="sub-profile"style={{textDecoration: "none", color: "#030303"}} to="/user-info">
+                <Link className="sub-profile"style={{textDecoration: "none", color: "#030303"}} to="/account">
                   <i className='user-icon'><AccountCircleOutlinedIcon className='icon user' /></i>
                   <p>Hi, {user? <span>{user.displayName}</span> : <span>User</span>}  </p></Link>
                 <Navbar />
-                </div>
+            </div> 
           </div>
           <div className='header__cart'>
           <Link to="/checkout">

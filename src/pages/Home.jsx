@@ -7,7 +7,6 @@ import Categories from '../components/Categories'
 const Home = () => {
   return (
     <div className='home'>
-      <Categories />
       <Banner />
       <Product />
       

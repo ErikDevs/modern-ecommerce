@@ -387,6 +387,7 @@ input::placeholder {
 .center {
     flex: 1;
     margin-bottom: 0;
+    padding: 2rem;
 }
 
 .footer img {

@@ -350,7 +350,7 @@ input {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-radius: 0.5rem;
+    border-radius: 2rem;
     transition: .3s ease;
 }
 
@@ -379,6 +379,7 @@ input {
 .product {
     background-color: white;
     display: flex;
+    height: auto;
     padding: 0.5rem 0;
     flex-direction: column;
     justify-content: center;
@@ -401,6 +402,7 @@ input {
 
 .product img {
     width: 50%;
+    height: auto;
 }
 
 .product-details {

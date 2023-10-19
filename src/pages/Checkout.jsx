@@ -1,6 +1,6 @@
 import { useContext } from 'react'
 import { Link } from 'react-router-dom'
-
+import Button from '../components/Button'
 import { CartContext } from '../StateManagement'
 import '../App.css'
 
@@ -28,7 +28,7 @@ const Checkout = () => {
               </div>
                   
                <div className="product-quanity">
-               <button onClick={() => {removeFromCart(item)}}>-</button>
+                  <button displayName='ere' onClick={() => {removeFromCart(item)}}>-</button>
                   <p className='quantity-tag'>{item.quantity}</p>
                 <button onClick={() => {addToCart(item)}}>+</button>
                </div>

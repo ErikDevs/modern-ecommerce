@@ -266,12 +266,13 @@ input {
 .banner-info h2 {
     font-family: "Georgia", serif;
     font-weight: 300;
-    font-size: 4rem;
+    font-size: 3rem;
+    margin-bottom: -30px;
     color: var(--light);
 }
 
 .banner-info h1 {
-    font-weight: bolder;
+    font-weight: 700;
     font-size: 5rem;
     width: fit-content;
     color: var(--light);
@@ -285,6 +286,7 @@ input {
     letter-spacing: 0.8rem;
     outline: 0.3rem solid var(--light);
     width: fit-content;
+    margin: 2rem 0 3rem;
 }
 
 .banner-info p {
@@ -292,7 +294,7 @@ input {
     font-family: "Raleway", sans-serif;
     color: var(--light);
     max-width: 40rem;
-    margin: 2rem 0;
+    margin: 2rem 0 3rem;
     line-height: 1.3rem;
     font-weight: 400;
 }

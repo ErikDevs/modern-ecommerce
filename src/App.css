@@ -1047,7 +1047,7 @@ i {
 
     .banner-info h2 {
         font-size: 2rem;
-        margin: auto;
+        margin: auto auto -25px auto;
         color: var(--bg-color);
 
         
@@ -1072,7 +1072,7 @@ i {
     .banner-info p {
         width: fit-content;
         text-align: center;
-        font-size: 0.8rem;
+        font-size: 1rem;
         font-weight: 400;
     }
     

@@ -9,8 +9,8 @@ import ShopIcon from '@mui/icons-material/Shop';
 
 const BottomFooter = () => {
   return (
-    <div className='copy-right'><p>Designed & Developed by Simplex</p>
-    <p>Lang: English</p>
+    <div className='copy-right'>
+    <p>©simplex_dev</p>
     <p>Terms & Privacy</p>
     <div className='social-media'>
       <FacebookIcon className='social-icon' />
